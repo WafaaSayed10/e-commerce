@@ -1,0 +1,301 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'poppins', sans-serif;
+}
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+h2{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+h3{
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+h4{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+h5{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #1d1d1d;
+}
+h6{
+    color: #d8d8d8;
+}
+button{
+    font-size: 0.8rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background-color: #1d1d1d;
+    color: aliceblue;
+    padding: 13px 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+button:hover{
+    background-color: #3a3833;
+}
+hr{
+    width: 30px;
+    height: 2px;
+    background-color: rgb(193, 68, 22);
+}
+#navbar{
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+#navbar .nav-item .nav-link{
+    padding: 0 20px;
+    color: black;
+    transition: 0.3s ease;
+}
+#navbar .nav-item .nav-link:hover, #navbar .nav-item .active, #navbar i:hover, #navbar i.active{
+    color: coral;
+}
+#navbar i{
+    padding: 0 7px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+#navbar .navbar-toggler{
+    outline: none;
+    border: none;
+}
+#bar{
+    font-size: 1.5rem;
+    padding: 7px;
+    color: black;
+    transition: 0.3s ease;
+}
+#navbar #bar:hover, #navbar #bar.active{
+    color: #fff;
+}
+@media (max-width: 991px) {
+    #navbar button:hover, #navbar button:focus{
+        background-color: coral;
+    }
+    #navbar button:hover #bar, #navbar button:focus #bar{
+        color: #fff;
+    }
+    #navbarSupportedContent > ul{
+        margin: 1rem;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: right;
+    }
+    #navbar .nav-item .nav-link{
+        padding: 10px 0;
+    }
+}
+
+#home{
+    background-image: url(../img/back.jpg);
+    background-position: top 60px center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+#home h1 span{
+    color: coral;
+}
+#home h5{
+    font-weight: 400;
+    font-size: 1rem;
+    color: #1d1d1d;
+}
+#new .new-card{
+    position: relative;
+    cursor: pointer;
+}
+#new .new-card .image{
+    height: 400px;
+}
+#new .new-card .image img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#new .new-card:hover .layout{
+    background-color: rgba(245, 178, 178, 0.7);
+}
+#new .new-card .layout{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s all;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#new .new-card .layout button{
+    background: none;
+    padding: 2.5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2a2a2a;
+    border-bottom: 1px solid #2a2a2a;
+    transform: translateY(70px);
+    transition: 0.3s ease;
+}
+#new .new-card .layout button:hover{
+    color: white;
+    border-bottom: 1px solid white;
+}
+#featured .product, #shoes .product{
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+#featured .product img, #shoes .product img{
+    transition: 0.3s all;
+}
+#featured .product:hover img, #shoes .product:hover img{
+    opacity: 0.7;
+}
+#featured .product .star, #shoes .product .star{
+    padding: 10px 0;
+}
+#featured .product i, #shoes .product i{
+    font-size: 0.8rem;
+    color: goldenrod;
+}
+#featured .product .buy-btn, #shoes .product .buy-btn{
+    background-color: coral;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.3s all;
+}
+#featured .product:hover .buy-btn, #shoes .product:hover .buy-btn{
+    transform: translateY(0);
+    opacity: 1;
+}
+#banner{
+    background-image: url(../img/banner/2.jpg);
+    background-attachment: fixed;
+    background-position: top 70px center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+#banner button{
+    background-color: coral;
+}
+#clothes .product{
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+#clothes .product img{
+    transition: 0.3s all;
+}
+#clothes .product:hover img{
+    opacity: 0.7;
+}
+#clothes .product .star{
+    padding: 10px 0;
+}
+#clothes .product i{
+    font-size: 0.8rem;
+    color: goldenrod;
+}
+#clothes .product .buy-btn{
+    background-color: coral;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.3s all;
+}
+#clothes .product:hover .buy-btn{
+    transform: translateY(0);
+    opacity: 1;
+}
+#watches .product{
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+#watches .product img{
+    transition: 0.3s all;
+}
+#watches .product:hover img{
+    opacity: 0.7;
+}
+#watches .product .star{
+    padding: 10px 0;
+}
+#watches .product i{
+    font-size: 0.8rem;
+    color: goldenrod;
+}
+#watches .product .buy-btn{
+    background-color: coral;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.3s all;
+}
+#watches .product:hover .buy-btn{
+    transform: translateY(0);
+    opacity: 1;
+}
+footer{
+    background-color: #222222;
+    color: #d8d8d8;
+}
+footer p{
+    color: #999;
+    font-size: 0.8rem;
+}
+footer h5{
+    color: #d8d8d8;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+footer li{
+    padding-bottom: 4px;
+}
+footer li a{
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #999;
+}
+footer li a:hover{
+    color: #d8d8d8;
+}
+footer .icons i{
+    color: black;
+    width: 38px;
+    height: 38px;
+    background-color: #fff;
+    text-align: center;
+    display: inline-block;
+    line-height: 38px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    margin: 0 5px;
+}
+footer .icons i:hover{
+    color: #fff;
+    background-color: coral;
+}
